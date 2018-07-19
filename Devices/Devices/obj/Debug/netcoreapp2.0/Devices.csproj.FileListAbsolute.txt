@@ -1,0 +1,11 @@
+C:\Users\Bahadir\Vestel\Devices\Devices\bin\Debug\netcoreapp2.0\Devices.deps.json
+C:\Users\Bahadir\Vestel\Devices\Devices\bin\Debug\netcoreapp2.0\Devices.runtimeconfig.json
+C:\Users\Bahadir\Vestel\Devices\Devices\bin\Debug\netcoreapp2.0\Devices.runtimeconfig.dev.json
+C:\Users\Bahadir\Vestel\Devices\Devices\bin\Debug\netcoreapp2.0\Devices.dll
+C:\Users\Bahadir\Vestel\Devices\Devices\obj\Debug\netcoreapp2.0\Devices.csproj.CoreCompileInputs.cache
+C:\Users\Bahadir\Vestel\Devices\Devices\obj\Debug\netcoreapp2.0\Devices.AssemblyInfoInputs.cache
+C:\Users\Bahadir\Vestel\Devices\Devices\obj\Debug\netcoreapp2.0\Devices.AssemblyInfo.cs
+C:\Users\Bahadir\Vestel\Devices\Devices\bin\Debug\netcoreapp2.0\Devices.pdb
+C:\Users\Bahadir\Vestel\Devices\Devices\obj\Debug\netcoreapp2.0\Devices.dll
+C:\Users\Bahadir\Vestel\Devices\Devices\obj\Debug\netcoreapp2.0\Devices.pdb
+C:\Users\Bahadir\Vestel\Devices\Devices\obj\Debug\netcoreapp2.0\Devices.csprojAssemblyReference.cache
