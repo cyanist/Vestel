@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Devices;
 using System.Text.RegularExpressions;
 using Devices.Models;
 using System.Net.Http;
@@ -20,7 +18,7 @@ namespace Devices.Controllers
         [HttpGet("{id}")]
         public Device Get(int id)
         {
-            DeviceAndCustomerDefitions a = new DeviceAndCustomerDefitions();
+            DeviceAndCustomerFunctions a = new DeviceAndCustomerFunctions();
             Device temp = a.ReturnDevice(id);
             return temp;
         }
@@ -29,7 +27,7 @@ namespace Devices.Controllers
         [HttpPost]
         public HttpResponseMessage Post([FromBody]Device value)
         {
-            DeviceAndCustomerDefitions temp = new DeviceAndCustomerDefitions();
+            DeviceAndCustomerFunctions temp = new DeviceAndCustomerFunctions();
             int id =temp.NewDevice(value);
             HttpResponseMessage res= new HttpResponseMessage(System.Net.HttpStatusCode.Created);
             //    regex=> .*\/Device\/([0-9]*) DEVİCEDAN SONRA GELEN KISMI DEĞİŞTİRME
@@ -42,7 +40,7 @@ namespace Devices.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            DeviceAndCustomerDefitions a = new DeviceAndCustomerDefitions();
+            DeviceAndCustomerFunctions a = new DeviceAndCustomerFunctions();
             a.DeleteDevice(id);
         }
     }

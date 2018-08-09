@@ -9,11 +9,11 @@ using Devices.Controllers;
 
 namespace Devices
 {
-    public class DeviceAndCustomerDefitions
+    public class DeviceAndCustomerFunctions
     {
 
         public System.Data.SqlClient.SqlConnection conn;
-        public DeviceAndCustomerDefitions()
+        public DeviceAndCustomerFunctions()
 
         {
             string myConnectionString = "Data Source=DESKTOP-OO8SH3F\\SQLEXPRESS;Initial Catalog=DevicesAndCustomersdb;User ID=Asd;Password=1234;";

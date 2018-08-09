@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Devices;
 using Devices.Models;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Http.Extensions;
@@ -22,7 +20,7 @@ namespace Devices.Controllers
         [HttpGet("{id}")]
         public CustomerDeviceRelations Get(int id)
         {
-            DeviceAndCustomerDefitions a = new DeviceAndCustomerDefitions();
+            DeviceAndCustomerFunctions a = new DeviceAndCustomerFunctions();
             CustomerDeviceRelations temp = a.ReturnRelations(id);
             return temp;
         }
@@ -31,7 +29,7 @@ namespace Devices.Controllers
         [HttpPost]
         public HttpResponseMessage Post([FromBody]CustomerDeviceRelations value)
         {
-            DeviceAndCustomerDefitions temp = new DeviceAndCustomerDefitions();
+            DeviceAndCustomerFunctions temp = new DeviceAndCustomerFunctions();
             int id = temp.NewRelations(value);
             HttpResponseMessage res = new HttpResponseMessage(System.Net.HttpStatusCode.Created);
             Regex x = new Regex(@"(\/CustomerAndDevice)");
@@ -43,7 +41,7 @@ namespace Devices.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            DeviceAndCustomerDefitions a = new DeviceAndCustomerDefitions();
+            DeviceAndCustomerFunctions a = new DeviceAndCustomerFunctions();
             a.DeleteRelations(id);
         }
     }
