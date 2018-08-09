@@ -16,13 +16,6 @@ namespace Devices.Controllers
     [Route("api/Device")]
     public class DeviceController : Controller
     {
-        // GET: api/Device
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         // GET: api/Device/5
         [HttpGet("{id}")]
         public Device Get(int id)
@@ -45,16 +38,12 @@ namespace Devices.Controllers
             return res;
         }
 
-        // PUT: api/Device/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-        
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            DeviceAndCustomerDefitions a = new DeviceAndCustomerDefitions();
+            a.DeleteDevice(id);
         }
     }
 }

@@ -16,12 +16,7 @@ namespace Devices.Controllers
     [Route("api/CustomerDeviceRelations")]
     public class CustomerDeviceRelationsController : Controller
     {
-        // GET: api/CustomerAndDevice
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+
 
         // GET: api/CustomerAndDevice/5
         [HttpGet("{id}")]
@@ -43,17 +38,13 @@ namespace Devices.Controllers
             res.Headers.Location = new Uri(x.Replace(Request.GetDisplayUrl(), "/CustomerAndDevice/" + id.ToString()));
             return res;
         }
-        
-        // PUT: api/CustomerAndDevice/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-        
+            
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            DeviceAndCustomerDefitions a = new DeviceAndCustomerDefitions();
+            a.DeleteRelations(id);
         }
     }
 }
